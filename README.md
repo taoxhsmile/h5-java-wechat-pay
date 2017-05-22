@@ -25,6 +25,25 @@ controll/payController
 代码使用spring-mvc实现
 采用servlet同理
 
+如有疑问可参考官方文档说明
+微信官方文档地址
+获取code文档地址：https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140842&token=&lang=zh_CN（搜索：[第一步：用户同意授权，获取code]）
+获取openid文档：https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419317851&token=&lang=zh_CN（搜索[第二步：通过code获取access_token]）
+统一下单地址：https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
+微信内H5调起支付：https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&index=6
+
+最后祝各位对接顺利\(^o^)/~
+
+
+
+
+
+
+
+
+
+
+
 
 
 
