@@ -32,6 +32,8 @@ controll/payController
 统一下单地址：https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
 微信内H5调起支付：https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&index=6
 
+程序值放了关键性代码，但足够详细
+
 最后祝各位对接顺利\(^o^)/~
 
 
