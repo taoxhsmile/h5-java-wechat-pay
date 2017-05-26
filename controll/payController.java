@@ -1,3 +1,8 @@
+import com.dk.comm.utils.Util;
+import com.dk.comm.utils.XMLParser;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/pay")
@@ -91,6 +96,26 @@ public class payController extends BaseController {
             //最后将js直接返回给前台 进行调用 给按钮增加paySubmit方法
         }
         return "submitPayWx";
+    }
+
+    //支付回调接口（微信异步会通知）notify_url 配置的值
+    @RequestMapping("/payCallback.shtml")
+    public String payCallback( HttpServletRequest request ) {
+        String retStr = new String(Util.readInput(request.getInputStream()),"utf-8");
+        Map<String, Object> map = XMLParser.getMapFromXML(retStr);
+        //返回的数据
+
+        //支付回调处理订单 更改订单状态
+
+        response.setContentType("text/xml");
+        String xml= "<xml>"
+                + "<return_code><![CDATA[SUCCESS]]></return_code>"
+                + "<return_msg><![CDATA[OK]]></return_msg>"
+                + "</xml>";
+        response.getWriter().print(xml);
+        response.getWriter().flush();
+        response.getWriter().close();
+
     }
 
 
